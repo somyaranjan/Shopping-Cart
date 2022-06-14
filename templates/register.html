@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>registration</title>
+	<link rel="icon"href="logo.png">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/validateForm.js') }}">
+    </script>
+	<style>
+		span{
+			color: red;
+		}
+		
+        #main{
+            text-align: center;
+            width: 220px;
+            height: fit-content;
+            background-color: aqua;
+            border-radius: 10px;
+       }
+       #regbtn{
+        background-color: aquamarine;
+        font-family: 'Courier New', Courier, monospace;
+        
+       }
+
+	</style>
+</head> 
+	<h2 style="text-decoration:underline; text-align: center;">New user Register Here</h2><br><br>
+<form action="/register" method="POST" onsubmit="return validate()">
+    <div id="main" style="position: inherit; margin-left: 42%;">
+	<label>Email: <span> * </span></label><br>
+	<input type="email" id="mailid" name="email"placeholder="Enter mail id"><br>
+	<label>Password: </label> <span>*</span><br>
+	<input type="password" id="password" name="password" placeholder="Enter Password"><br>
+    <label>Confirm Password</label><span>*</span><br>
+    <input type="password" id="cpassword" name="cpassword" placeholder="Enter Confirm Password"><br>
+    <label>First Name : </label> <span>*</span><br>
+	<input type="text" id="firstName" name="firstName" placeholder="Enter First Name"><br>
+    <label>Last Name : </label> <span>*</span><br>
+	<input type="text" id="lastName" name="lastName" placeholder="Enter Last Name"><br>
+    <label>Address Line 1:</label><span>*</span><br>
+    <input type="text" id="address1" name="address1" placeholder="Enter Address 1"><br>
+    <label>Address Line 2:</label><span>*</span><br>
+    <input type="text" id="address2" name="address2" placeholder="Enter Address 2"><br>
+    <label>Zipcode:</label><span>*</span><br>
+    <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zipcode"><br>
+    <label>City:</label><span>*</span><br>
+    <input type="text" id="city" name="city" placeholder="Enter City"><br>
+    <label>State:</label><span>*</span><br>
+    <input type="text" id="state" name="state" placeholder="Enter State"><br>
+    <label>Country:</label><span>*</span><br>
+    <input type="text" id="country" name="country" placeholder="Enter Country"><br>
+	<label>Phone Number:</label> <span>*</span><br>
+	<input type="text" id="phone" name="phone" placeholder="Enter phone no."><br><br>
+	
+    <input type="submit" value="Register" id="regbtn">
+    </div>
+</form>
+</body>
+</html>

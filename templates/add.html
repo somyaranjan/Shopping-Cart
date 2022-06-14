@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Admin-Add item page</title>
+<link rel="stylesheet" href={{ url_for('static', filename='css/addItem.css') }} />
+</head>
+<body>
+<h2>Add Items</h2>
+<form action="/addItem" method="POST" enctype="multipart/form-data">
+	<div id="main">
+		Name: <input type="text" name="name"><br>
+		Price: <input type="text" name="price"><br>
+		Description: <textarea name="description" rows=3 cols="40"></textarea><br>
+		Image: <input type="file" name="image"><br>
+		Stock: <input type="text" name="stock"><br>
+		Category: <select name="category">
+			{% for row in categories %}
+				<option value="{{row[0]}}">{{row[1]}}</option>
+			{% endfor %}
+		</select><br>
+		<input type="submit">
+	</div>
+</form>
+</body>
+</html>
+

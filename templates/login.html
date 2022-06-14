@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>	First flask app </title>
+<style>
+	#loginmain{
+		text-align: center;
+		width: 220px;
+		height: fit-content;
+		background-color: aqua;
+		border-radius: 10px;
+	}
+</style>
+</head>
+<body>
+<p> {{error}} </p>
+<form action="/login" method="POST">
+	<div id="loginmain" style="position: inherit; margin-left: 42%;">
+		<p>Email: <br><input type="text" name="email"></p>
+		<p>Password: <br><input type="password" name="password"></p>
+		<p><input type="submit"></p>
+		<a href="/registerationForm">Register here</a>
+	</div>
+</form>
+
+</body>
+</html>
